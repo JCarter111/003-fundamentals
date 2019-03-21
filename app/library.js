@@ -3,7 +3,10 @@ class Library {
     this.books = books;
   }
 
-  add() {}
+  add(newBook) {
+    this.books.push(newBook);
+
+  }
 }
 
 module.exports = Library;
