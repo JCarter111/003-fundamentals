@@ -9,7 +9,8 @@ class Library {
 
   remove(oldBook) {
     //keep all books except book that has ISBN that we want to remove
-    const keptBooks = books.filter(function(oldBook) {
+ 
+    const keptBooks = this.books.filter(function() {
       if (this.books.ISBN === oldBook.ISBN) {
         return false;
       } else {
@@ -17,6 +18,8 @@ class Library {
       }
     });    
    //update books
-   this.books = remove(oldBook); 
-  }
+   
+   this.books = keptBooks;
+  }  
+}
 module.exports = Library;
